@@ -12,3 +12,4 @@
 /Users/milek/Developer/GiganciProgramowania/nowasymzycia/nowasymzycia/obj/Debug/net8.0/nowasymzycia.pdb
 /Users/milek/Developer/GiganciProgramowania/nowasymzycia/nowasymzycia/obj/Debug/net8.0/nowasymzycia.genruntimeconfig.cache
 /Users/milek/Developer/GiganciProgramowania/nowasymzycia/nowasymzycia/obj/Debug/net8.0/ref/nowasymzycia.dll
+/Users/milek/Developer/GiganciProgramowania/nowasymzycia/nowasymzycia/obj/Debug/net8.0/nowasymzycia.sourcelink.json

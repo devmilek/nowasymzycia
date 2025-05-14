@@ -8,18 +8,17 @@ public class Siatka
     private const int Martwa = 0;
 
 
-    public Siatka(int liczbaKolumn, int liczbaWierszy)
+    public Siatka(int[,] tablicaPoczatkowa, int liczbaKolumn, int liczbaWierszy)
     {
         _tablicaKomorek = new int[liczbaWierszy, liczbaKolumn];
         
         Random random = new Random();
         
-        for (int i = 0; i < liczbaWierszy; i++)
+        for (int i = 0; i < tablicaPoczatkowa.GetLength(0); i++)
         {
-            for (int j = 0; j < liczbaKolumn; j++)
+            for (int j = 0; j < tablicaPoczatkowa.GetLength(1); j++)
             {
-                int wylosowanaLiczba = random.Next(2);
-                _tablicaKomorek[i, j] = wylosowanaLiczba == 1 ? Martwa : Zywa;
+                _tablicaKomorek[i, j] = tablicaPoczatkowa[i, j];
             }
         }
     }
@@ -93,22 +92,29 @@ public class Siatka
 
     public void Wydrukuj()
     {
+        string wydruk = new string('-', _tablicaKomorek.GetLength(1) *2) + "\n";
+        
         for (int i = 0; i < _tablicaKomorek.GetLength(0); i++)
         {
             for (int j = 0; j < _tablicaKomorek.GetLength(1); j++)
             {
                 if (_tablicaKomorek[i, j] == Zywa)
                 {
-                    Console.Write("O");
+                    wydruk += "O";
                 }
                 else
                 {
-                    Console.Write(" ");
+                    wydruk += " ";
                 }
-                Console.Write(" ");
+
+                wydruk += " ";
             }
-            Console.WriteLine();
+
+            wydruk += "|\n";
         }
+
+        wydruk += new string('-', _tablicaKomorek.GetLength(1) * 2);
+        Console.WriteLine(wydruk);
     }
     
 }

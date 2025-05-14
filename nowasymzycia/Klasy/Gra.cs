@@ -13,9 +13,15 @@ public class Gra
     {
         for (int i = 0; i < liczbaIteracji; i++)
         {
+            Console.Clear();
+            
             Console.WriteLine($"Itreacja {i}: ");
             _siatka.ZrobKrok();
             _siatka.Wydrukuj();
+            
+            Console.ReadKey();
+            
+            Thread.Sleep(100);
         }
     }
 }
